@@ -1,11 +1,17 @@
-#include<stdio.h>
+#include<Stdio.h>
+int table(int n){
+   static int i=1;
+    if(i<=10){
+     printf("%d*%d=%d\n",n, i ,n*i);
+     i++;
+     table(n);
+       
+    }return table;
+} 
 int main (){
     int n;
-    printf("enter the number ");
+    printf("enter the number n");
     scanf("%d",&n);
-    for(int i=1;i<=10;i++){
-        int table=n*i;
-        printf("%d ",table);
-    }
+    table(n);
     return 0;
 }
