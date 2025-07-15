@@ -1,15 +1,14 @@
 #include<stdio.h>
-void show(int a,int b){
-    a=1000;
-    b=2000;
-    printf("a=%d b=%d\n",a,b);
+int*p;
+void show(){
+    int x=10;
+    p=&x;
 }
 int main(){
-    int x=10,y=20;
-    printf("x=%d y=%d\n",x,y);
-    show(x,y);
-    printf("x=%d y=%d\n",x,y);
+    show();
+    printf("%d",*p);//here pointer become dangling pointer
     return 0;
-}
 
- 
+
+
+}
